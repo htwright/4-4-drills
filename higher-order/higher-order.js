@@ -60,3 +60,26 @@ rocksWarning('71st Street');
 rocksWarning('81st Street');
 iceWarning('Elm Street');
 bodiesWarning('Main Street');
+
+
+ 
+
+
+
+let movements = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+
+
+movements = movements.filter(function(step){
+	if (step[0] >= 0 && step[1] >= 0){
+		return true;
+	}
+
+})
+
+let distance = movements.map(function(step){
+	return step[0] + step[1];
+})
+
+distance.forEach(function(totalSteps) {
+  console.log(totalSteps);
+});
